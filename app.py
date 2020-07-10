@@ -1,4 +1,5 @@
 # codé par cyber vladimir poutine et Rboud-sensei
+# TODO reduce image resolution
 from flask import Flask, render_template, request
 from math import ceil
 
