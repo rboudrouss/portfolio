@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>calcul bac 2020</title>
+    <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;900&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="img/rboud-01.png" />
+    <link rel="icon" type="image/png" href="{{url_for('static',filename='img/rboud-01.png')}}" />
+    {% block head %}{% endblock %}
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="img/devrboud.png" alt="">
+            <img src="{{url_for('static',filename='img/devrboud.png')}}" alt="">
         </div>
 
         <button class="nav-toggle" aria-label="toggle navigation">
@@ -37,10 +38,13 @@
             <p>Ce ne sera probablement pas la note de votre bac, il s'agit simplement d'avoir un ordre d'idée. Ce calculateur ne prend pas en compte les notes aux épreuves anticipée de sport ni d'anglais dont vous n'avez pas les notes, de plus le travail du comité d'harmonisation pourrait vous donner un résultat bien différent</p>
         </div>
 
-        <img src="img/calculatrice.jpg" alt="" class="about-me__img">
+        <img src="{{url_for('static',filename='img/calculatrice.jpg')}}" alt="" class="about-me__img">
     </section>
 
-
+    <section class="my-work">
+        {% block content %}
+        {% endblock %}
+    </section>
 
 
     <!-- Footer -->
@@ -66,7 +70,7 @@
         </ul>
     </footer>
 
-    <script src="js/index.js"></script>
+    <script src="{{url_for('static',filename='js/index.js')}}"></script>
 
 </body>
 </html>

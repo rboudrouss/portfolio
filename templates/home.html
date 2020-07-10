@@ -6,14 +6,14 @@
     <title>Portfolio rboud</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;900&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="img/rboud-01.png" />
+    <link rel="icon" type="image/png" href="{{url_for('static',filename='img/rboud-01.png')}}" />
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="img/devrboud.png" alt="">
+            <img src="{{url_for('static',filename='img/devrboud.png')}}" alt="">
         </div>
 
         <button class="nav-toggle" aria-label="toggle navigation">
@@ -32,7 +32,7 @@
     <section class="intro" id="home">
         <h1 class="section__title section__title--intro">Qui est <strong>rboud ?</strong></h1>
         <p class="section__subtitle section__subtitle--intro">Developpeur & monteur</p>
-        <img class ="intro__img" src="img/rboud-01.png" alt="rboud icon">
+        <img class ="intro__img" src="{{url_for('static',filename='img/rboud-01.png')}}" alt="rboud icon">
     </section>
 
     <!-- My services -->
@@ -72,7 +72,7 @@
             <p>Passionné par la programmation, il a commencé à programmer en Autoit à l'âge de 11 ans. Maintenant il compte en faire son métier.</p>
         </div>
 
-        <img src="img/rboud-01.png" alt="" class="about-me__img">
+        <img src="{{url_for('static',filename='img/rboud-01.png')}}" alt="" class="about-me__img">
     </section>
 
     <!-- My work -->
@@ -83,23 +83,23 @@
         <div class="portfolio">
             <!-- Portfolio Item -->
             <a href="http://rboud.pythonanywhere.com/calcul" class="portfolio__item" target="_blank">
-                <img src="img/portfolio-01.jpg" alt="calcul du bac 2020" class="portfolio__img">
+                <img src="{{url_for('static',filename='img/portfolio-01.jpg')}}" alt="calcul du bac 2020" class="portfolio__img">
             </a>
             <!-- Portfolio Item -->
             <a href="https://drive.google.com/drive/folders/1aVEEq0tSTPQGzcoppwLuDx_6mee0uwO5?usp=sharing" class="portfolio__item" target="_blank">
-                <img src="img/projet_badr.png" alt="sport editing" class="portfolio__img">
+                <img src="{{url_for('static',filename='img/projet_badr.png')}}" alt="sport editing" class="portfolio__img">
             </a>
             <!-- Portfolio Item -->
             <a href="https://drive.google.com/file/d/1dfVXgwMwaKrexy4eXHiT22qn94j1YxH9/view?usp=sharing" class="portfolio__item" target="_blank">
-                <img src="img/mon_f3c.png" alt="traveling editing" class="portfolio__img">
+                <img src="{{url_for('static',filename='img/mon_f3c.png')}}" alt="traveling editing" class="portfolio__img">
             </a>
             <!-- Portfolio Item -->
             <a href="https://www.youtube.com/watch?v=ZZGanc5XMgY" class="portfolio__item" target="_blank">
-                <img src="img/projet_tpe.png" alt="scientific editing" class="portfolio__img">
+                <img src="{{url_for('static',filename='img/projet_tpe.png')}}" alt="scientific editing" class="portfolio__img">
             </a>
             <!-- Portfolio Item -->
             <a href="https://github.com/rboudrouss" class="portfolio__item" target="_blank">
-                <img src="img/projet_github.png" alt="check my github" class="portfolio__img">
+                <img src="{{url_for('static',filename='img/projet_github.png')}}" alt="check my github" class="portfolio__img">
             </a>
         </div>
     </section>
@@ -127,7 +127,7 @@
         </ul>
     </footer>
 
-    <script src="js/index.js"></script>
+    <script src="{{url_for('static',filename='js/index.js')}}"></script>
 
 </body>
 </html>
