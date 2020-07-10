@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <div class="logo">
+        <div class="logo" id="home">
             <img src="{{url_for('static',filename='img/devrboud.png')}}" alt="">
         </div>
 
@@ -28,13 +28,18 @@
             </ul>
         </nav>
     </header>
-    <!-- Intro -->
-    <section class="intro" id="home">
-        <h1 class="section__title section__title--intro">Qui est <strong>rboud ?</strong></h1>
-        <p class="section__subtitle section__subtitle--intro">Developpeur & monteur</p>
-        <img class ="intro__img" src="{{url_for('static',filename='img/rboud-01.png')}}" alt="rboud icon">
-    </section>
 
+    <!-- About me -->
+    <section class="about-me" id="about">
+        <h2 class="section__title section__title--about">Qui est <strong>rboud</strong> ?</h2>
+        <p class="section__subtitle section__subtitle--about">Developpeur & monteur vidéo</p>
+
+        <div class="about-me__body">
+            <p>Étudiant marocain agé de 17 ans, a obtenu son bac au lycée Paul Valéry de Meknès et compte continuer ses études en France</p>
+            <p>Passionné par la programmation, il a commencé à programmer en Autoit à l'âge de 11 ans. Maintenant il compte en faire son métier.</p>
+        </div>
+        <img src="{{url_for('static',filename='img/rboud-01.png')}}" alt="" class="about-me__img">
+    </section>
     <!-- My services -->
     <section class="my-services" id="services">
         <h2 class="section__title section__title--services">Ce que je fais</h2>
@@ -62,24 +67,19 @@
         </div>
         <a href="#work" class="btn">Mon Travail</a>
     </section>
-    <!-- About me -->
-    <section class="about-me" id="about">
-        <h2 class="section__title section__title--about">Qui je suis ?</h2>
-        <p class="section__subtitle section__subtitle--about">Developpeur & monteur vidéo</p>
-        
-        <div class="about-me__body">
-            <p>Étudiant marocain agé de 17 ans, a obtenu son bac au lycée Paul Valéry de Meknès et compte continuer ses études en France</p>
-            <p>Passionné par la programmation, il a commencé à programmer en Autoit à l'âge de 11 ans. Maintenant il compte en faire son métier.</p>
-        </div>
 
-        <img src="{{url_for('static',filename='img/rboud-01.png')}}" alt="" class="about-me__img">
+    <!-- Intro -->
+    <section class="intro">
+        <h1 class="section__title section__title--intro">Qui est <strong>rboud ?</strong></h1>
+        <p class="section__subtitle section__subtitle--intro">Curriculum Vitae</p>
+        <iframe class ="intro__img" src="https://drive.google.com/file/d/1kO-x69Xrdyl3CDc6vC3gq1GlHS5rxq_T/preview"></iframe>
+        <!--<img class ="intro__img" src="{{url_for('static',filename='img/rboud-01.png')}}" alt="rboud icon">-->
     </section>
-
     <!-- My work -->
     <section class="my-work" id="work">
         <h2 class="section__title section__title--work">Mon travail</h2>
         <p class="section__subtitle section__subtitle--work">Un échantillon de mon travail</p>
-        
+
         <div class="portfolio">
             <!-- Portfolio Item -->
             <a href="http://rboud.pythonanywhere.com/calcul" class="portfolio__item" target="_blank">

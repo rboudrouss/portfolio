@@ -88,12 +88,13 @@ strong {font-weight: var(--fw-bold);}
 .submit {
     background-color:var(--clr-accent);
     border: none;
-    color: white;
+    color: var(--clr-dark);
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: var(--fs-body);
+
 }
 
 /* Typography */
